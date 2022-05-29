@@ -27,13 +27,13 @@ data:
     port: 8848
     namespaceID: 'dev'
   provider:
-      tracerProvider: 
-      dataCenterProvider: http://172.19.132.103:10675
-      tableProvider: http://172.19.98.19:30800
-      appProvider: http://172.19.132.103:10666
-      formProvider: http://172.19.132.103:10667
-      permissionProvider: permission
       userCenterProvider: http://172.19.132.103:15001
+      formProvider: http://172.19.132.103:10667
+      dataCenterProvider: http://172.19.132.103:10675
+      permissionProvider: permission
+      appProvider: http://172.19.132.103:10666
+      tableProvider: http://172.19.98.19:30800
+      tracerProvider: 
 
   third_party:
       sentry:
