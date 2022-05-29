@@ -1,0 +1,45 @@
+server:
+  http:
+    addr: 0.0.0.0:8000
+    timeout: 5s
+  grpc:
+    addr: 0.0.0.0:9000
+    timeout: 5s
+data:
+  database:
+    mysql_lc_go:
+        driver: mysql
+        dsn: root:doulang2022@tcp(172.19.132.102:3306)/polaris_project_manage_projectsvc_uat?charset=utf8mb4&parseTime=True&loc=Local
+    mysql1:
+        driver: mysql
+        dsn: root:root@tcp(127.0.0.1:3306)/test3
+    mysql2:
+        driver: mysql
+        dsn: root:root@tcp(127.0.0.1:3306)/test2
+  redis:
+    addr: 127.0.0.1:6379
+    password: sau2Al!tn12
+    db: 11
+    read_timeout: 0.2s
+    write_timeout: 0.2s
+  nacos:
+    host: '172.19.132.101'
+    port: 8848
+    namespaceID: 'dev'
+  provider:
+      tracerProvider: 
+      dataCenterProvider: http://172.19.132.103:10675
+      tableProvider: http://172.19.98.19:30800
+      appProvider: http://172.19.132.103:10666
+      formProvider: http://172.19.132.103:10667
+      permissionProvider: permission
+      userCenterProvider: http://172.19.132.103:15001
+
+  third_party:
+      sentry:
+          dsn: http://a23eae33f54f46e4b7e0a4abd115263a@sentry.bjx.cloud/41
+      jaeger:
+          udp_address: 172.19.132.103:6831
+          trace_service: "lesscode-go-table-prod"
+          sampler_type: "probabilistic"
+          sampler_param: 0.0
