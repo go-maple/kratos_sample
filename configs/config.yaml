@@ -33,7 +33,7 @@ data:
       permissionProvider: permission
       appProvider: http://172.19.132.103:10666
       tableProvider: http://172.19.98.19:30800
-      tracerProvider: 
+      tracerProvider: tracerProvider
 
   third_party:
       sentry:

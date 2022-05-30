@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package kratos.api;
+
+import "errors/errors.proto";
+
+option go_package = "github.com/go-maple/kratos_sample/v1;v1";
+
+enum ErrorReason {
+
+    option (errors.default_code) = 500;
+
+    SUCCESS_OK                              = 0;
+    INVALID_PARAMS                          = 1  [(errors.code) = 400];
+    UPDATE_FAILED                           = 2  [(errors.code) = 400]; // 更新失败
+    DUPLICATE_OPERATION                     = 3  [(errors.code) = 400]; // 重复操作
+
+    RECORD_NOT_FOUND                        = 100  [(errors.code) = 400]; // 记录没找到
+
+    AUTH_FAILED                             = 101  [(errors.code) = 401]; // 记录没找到
+}
